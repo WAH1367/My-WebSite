@@ -41,3 +41,10 @@ p {
     border: 3px solid rgb(17, 210, 200);
     border-radius: 10px;
 }
+
+.btn:hover {
+    border: 5px solid rgb(27, 247, 129);
+    background-color: rgb(79, 79, 79);
+    box-shadow: 10px 5px 5px white;
+    transition: all 0.3s;
+}
