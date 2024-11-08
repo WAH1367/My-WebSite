@@ -29,6 +29,8 @@ p {
     margin-top: 300px;
     color: white;
     justify-content: center;
+    align-itmes: center;
+    text-align: center;
 }
 
 body .btn {
