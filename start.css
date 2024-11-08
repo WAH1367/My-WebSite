@@ -2,6 +2,7 @@ body {
     background-image: url(https://wallpapercave.com/wp/wp10533084.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 header h1 {
