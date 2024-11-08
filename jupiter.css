@@ -1,0 +1,163 @@
+body {
+    background-image: url(https://th.bing.com/th/id/R.5581668eaefa6c77cbe3968fa3c082ce?rik=5%2b4ZPqltFK6b7g&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f6%2f5%2fe%2f783355-amazing-neat-backgrounds-1920x1200-for-samsung.jpg&ehk=cvmJ3bAARzr8iZ2X%2fs1c4rINiUxTMfC5SJj8mg25ulY%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100vw;
+    margin: 10px 0 40px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 190px);
+    grid-template-rows: repeat(auto-fill, 400px);
+    grid-gap: 40px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    font-family: "Major Mono Display";
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-top: 0;
+    margin-bottom: 200px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    font-size: 1.3em;
+    margin-top: 300px;
+    padding: 0 5em;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+body .btn {
+    display: block;
+    width: 50px;
+    padding: 0em;
+    margin-top: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    border: 3px solid rgb(17, 210, 200);
+    border-radius: 10px;
+}
+
+body .btn:hover {
+    border: 5px solid rgb(27, 247, 129);
+    background-color: rgb(79, 79, 79);
+    box-shadow: 10px 5px 5px white;
+    transition: all 0.3s;
+}
+
+:root {
+    --jupiter-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/jupiter.jpg);
+    --jupiter-tilt: rotate(3.1deg);
+    --jupiter-day: 9.9;
+    --jupiter-color: #c9b5a4;
+}
+
+@keyframes planetRotate {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: -200% center;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 200px;
+}
+
+.card--jupiter .planet__atmosphere {
+    box-shadow: inset 10px 0px 12px -2px rgba(255, 255, 255, 0.2), inset -70px 0px 50px 0px black, -5px 0px 10px -4px var(--jupiter-color);
+}
+.card--jupiter .planet__surface {
+    background-image: var(--jupiter-image);
+    transform: var(--jupiter-tilt) scale(1.2);
+    animation: planetRotate calc(var(--jupiter-day)*.1s) linear infinite;
+}
+.card--jupiter .card__planet::before {
+    transform: var(--jupiter-tilt) scale(1.2);
+    border-color: var(--jupiter-color);
+    color: var(--jupiter-color);
+}
+.card--jupiter .tilt__icon {
+    transform: var(--jupiter-tilt);
+    color: var(--jupiter-color);
+}
+
+.card__planet::before {
+    content: "";
+    position: absolute;
+    height: 190px;
+    z-index: -2;
+    left: 50%;
+    top: 0%;
+    border-left: 1px dashed rgba(255, 255, 255, 0.25);
+}
+  
+.planet__atmosphere {
+    height: 190px;
+    width: 190px;
+    position: relative;
+    background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 65%);
+    border-radius: 100px;
+    overflow: hidden;
+}
+.planet__surface {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+}
+  
+.card--sun .planet__atmosphere {
+    box-shadow: 0px 0px 10px 0px var(--sun-color), 0px 0px 1000px -2px var(--sun-color);
+}
+  
+.card__info {
+    width: 100%;
+}
+  
+.info__title {
+    text-align: center;
+    font-size: 28px;
+    color: white;
+}
+.info__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info__item {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: white;
+}
+.info__item .tilt__icon {
+    margin: 0 5px;
+}
+.info__label {
+    font-size: 11px;
+    color: white;
+}
+.info__line {
+    flex: 1;
+    margin: 0 5px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}

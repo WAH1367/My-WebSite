@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>computer programming</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="entry.js">
+    <header class="header">
+        <h1 class="logo"><a href="#">THE SOLAR SYSTEM</a></h1>
+          <ul class="main-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="information.html">Information</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+    </header>
+    <style>
+        .circle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #8cff00;
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.1s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Welcome</h1>
+            <h2>Discover the solar system!</h2>
+            <a id="START"></a>
+            <a href="start.html" class="btn">START</a>
+        </div>
+    </section>
+    <div class="box1">
+    </div>
+    <div class="circle" id="circle"></div>
+    <script>
+        const circle = document.getElementById('circle');
+
+        document.addEventListener('mousemove', (event) => {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            circle.style.left = `${mouseX - 2}px`;
+            circle.style.top = `${mouseY - 2}px`;
+        });
+    </script>
+</body>
+
+</html>
